@@ -26,12 +26,8 @@
 			width: 100%;
 			height: 100vh;
 		}
-		div.space {
-
-		}
 		div h1, div span{
 			position: absolute;
-			padding: 8px 8px;
 			border: 4px solid white;
 			font-size: 30px;
 			font-family: sans-serif;
@@ -40,6 +36,7 @@
 			box-shadow: 1px 1px 1px green;
 		}
 		div h1{
+			padding: 8px 8px;
 			top: 30%;
 			left: 50%;
 			transform: translate(-50%,-70%);
@@ -51,7 +48,10 @@
 			left: 50%;
 			transform: translate(-50%,-50%);
 		}
-		div a:hover h1{
+		div span a{
+			padding: 8px 8px;
+		}
+		div a:hover h1, div span a:hover{
 			padding: 8px 15px;
 			transition: .25s;
 		}
@@ -71,6 +71,7 @@
 			font-size: 30px;
 			font-weight: bold;
 			text-shadow: 1px 1px 1px green;
+			cursor: pointer;
 		}
         .space{
   			position: relative;
@@ -115,7 +116,7 @@
 			}
 		}
 
-		@media only screen and (max-width: 1053px) {
+		@media only screen and (max-width: 1034px) {
 			div h1{
 				top: 50%;
 				left: 50%;
@@ -124,11 +125,19 @@
 		}
 
 		@media only screen and (max-width: 960px){
-			div h1, div span{
+			div h1, div span a{
 				font-size: 40px;
 			}
 			div span input[type = "button"]{
 				font-size: 40px;
+			}
+		}
+
+		@media only screen and (max-height: 593px){
+			div h1{
+				top: 30%;
+			left: 50%;
+			transform: translate(-50%,-70%);
 			}
 		}
     </style>
@@ -136,9 +145,9 @@
 </head>
 <body>
 
-    <div class="space">
+    <div class="space" id="1">
 
-		<a href="#1"><h1 id="txt">CLICK ME</h1></a>
+		<a href="#2"><h1 id="txt">CLICK ME</h1></a>
 
         <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 320">
             <path class="wave1" fill="#00791a" fill-opacity="1" d="M0,256L30,224C60,192,120,128,180,96C240,64,300,64,360,74.7C420,85,480,107,540,138.7C600,171,660,213,720,197.3C780,181,840,107,900,101.3C960,96,1020,160,1080,181.3C1140,203,1200,181,1260,165.3C1320,149,1380,139,1410,133.3L1440,128L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path>
@@ -149,8 +158,8 @@
         </svg>
     </div>
 
-	<div class="footer" id="2">
-		<span id="1">PHELYPPE ÁLEX <input type="button" value="</>"> </span>
+	<div class="footer">
+		<span id="2"><a href="#1">PHELYPPE ÁLEX <input type="button" value="</>"></a></span>
 
 		<h2>© Copyright by PHELYPPE ÁLEX</h2>
 	</div>
